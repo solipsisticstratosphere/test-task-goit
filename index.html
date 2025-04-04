@@ -5,42 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Excel Webinar - GO IT</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .background-elements {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <div class="bg-vertical-stripes"></div>
-      <div class="bg-grid-right"></div>
-      <div class="formula formula-1">f(x) = MIN(E2:E5)</div>
-      <div class="formula formula-2">= (A2*B2)</div>
-      <div class="formula formula-3">AVERAGE(B2+D2)</div>
-      <div class="formula formula-4">SUM(A1+B4)</div>
-      <div class="formula formula-5">SUMIF(C3:C12,">70,000")</div>
+      <div class="background-elements">
+        <div class="bg-vertical-stripes"></div>
+        <div class="bg-grid-right"></div>
+        <div class="formula formula-1">f(x) = MIN(E2:E5)</div>
+        <div class="formula formula-2">= (A2*B2)</div>
+        <div class="formula formula-3">AVERAGE(B2+D2)</div>
+        <div class="formula formula-4">SUM(A1+B4)</div>
+        <div class="formula formula-5">SUMIF(C3:C12,">70,000")</div>
+      </div>
 
       <div class="main-content">
         <div class="content-wrapper">
           <div class="left-column">
             <div class="logo">
-              <svg
-                width="114"
-                height="54"
-                viewBox="0 0 114 54"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="54" height="54" fill="black" />
-                <path d="M24.5 27L54 27" stroke="black" stroke-width="20" />
-                <path d="M24.5 27L54 27" stroke="white" stroke-width="16" />
-                <path d="M24.5 27L44 17L44 37L24.5 27Z" fill="black" />
-                <path d="M70 20.5H75.5V33.5H70V20.5Z" fill="black" />
-                <path d="M85 20.5H90.5V33.5H85V20.5Z" fill="black" />
-                <path d="M85 20.5H90.5V33.5H85V20.5Z" fill="black" />
-                <path d="M100 20.5H105.5V33.5H100V20.5Z" fill="black" />
-              </svg>
+              <img src="/assets/logo.png" alt="Excel Webinar Logo" />
             </div>
 
             <div class="tags">
               <div class="tag">Безоплатний вебінар<span></span></div>
-              <div class="tag">Старт: 10 січня 19:30<span></span></div>
+              <div class="tag tag-last">
+                Старт: <span class="tag-date">10 січня 19:30</span>
+              </div>
             </div>
 
             <h1 class="main-heading">
@@ -49,7 +49,8 @@
 
             <p class="description">
               Опануйте функціонал Microsoft Excel, автоматизуйте свою роботу та
-              створюйте таблиці швидко і в задоволення
+              створюйте таблиці швидко<br />
+              і в задоволення
             </p>
 
             <div class="arrow-container">
@@ -81,11 +82,63 @@
             </div>
           </div>
 
+          <div class="mobile-registration-container">
+            <h2 class="form-heading">Реєструйся просто зараз</h2>
+
+            <div class="timer">
+              <div class="timer-item">
+                <div id="mobile-days" class="timer-number">00</div>
+                <div class="timer-label">днів</div>
+              </div>
+              <div class="timer-separator">
+                <svg width="6" height="23">
+                  <circle cx="3" cy="5" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                  <circle cx="3" cy="20" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                </svg>
+              </div>
+              <div class="timer-item">
+                <div id="mobile-hours" class="timer-number">00</div>
+                <div class="timer-label">годин</div>
+              </div>
+              <div class="timer-separator">
+                <svg width="6" height="23">
+                  <circle cx="3" cy="5" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                  <circle cx="3" cy="20" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                </svg>
+              </div>
+              <div class="timer-item">
+                <div id="mobile-minutes" class="timer-number">00</div>
+                <div class="timer-label">хвилин</div>
+              </div>
+              <div class="timer-separator">
+                <svg width="6" height="23">
+                  <circle cx="3" cy="5" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                  <circle cx="3" cy="20" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                </svg>
+              </div>
+              <div class="timer-item">
+                <div
+                  id="mobile-seconds"
+                  class="timer-number timer-number-green"
+                >
+                  00
+                </div>
+                <div class="timer-label">секунд</div>
+              </div>
+            </div>
+
+            <button id="register-button-mobile" class="register-button-mobile">
+              Зареєструватися
+            </button>
+          </div>
+
           <div class="right-column">
             <div class="bg-green-squares">
               <div class="green-square green-square-1"></div>
               <div class="green-square green-square-2"></div>
               <div class="green-square green-square-3"></div>
+              <div class="green-square green-square-4"></div>
+              <div class="green-square green-square-5"></div>
             </div>
 
             <div class="form-container">
@@ -96,17 +149,32 @@
                   <div id="days" class="timer-number">00</div>
                   <div class="timer-label">днів</div>
                 </div>
-                <div class="timer-separator">:</div>
+                <div class="timer-separator">
+                  <svg width="6" height="23">
+                    <circle cx="3" cy="5" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                    <circle cx="3" cy="20" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                  </svg>
+                </div>
                 <div class="timer-item">
                   <div id="hours" class="timer-number">00</div>
                   <div class="timer-label">годин</div>
                 </div>
-                <div class="timer-separator">:</div>
+                <div class="timer-separator">
+                  <svg width="6" height="23">
+                    <circle cx="3" cy="5" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                    <circle cx="3" cy="20" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                  </svg>
+                </div>
                 <div class="timer-item">
                   <div id="minutes" class="timer-number">00</div>
                   <div class="timer-label">хвилин</div>
                 </div>
-                <div class="timer-separator">:</div>
+                <div class="timer-separator">
+                  <svg width="6" height="23">
+                    <circle cx="3" cy="5" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                    <circle cx="3" cy="20" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                  </svg>
+                </div>
                 <div class="timer-item">
                   <div id="seconds" class="timer-number timer-number-green">
                     00
@@ -158,6 +226,9 @@
                       type="tel"
                       class="form-input phone-input"
                       placeholder=""
+                      aria-label="Введіть номер телефону"
+                      autocomplete="tel"
+                      pattern="\+380 \d{2} \d{3} \d{2} \d{2}"
                       required
                     />
                   </div>
@@ -208,270 +279,162 @@
                   Зареєструватися
                 </button>
               </form>
-
-              <div class="excel-image-container">
-                <img
-                  src="excel-charts.jpg"
-                  alt="Excel Charts"
-                  class="excel-image"
-                />
-              </div>
+            </div>
+            <div class="excel-image-container">
+              <img
+                src="/assets/pic.png"
+                alt="Excel Charts"
+                class="excel-image"
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <script>
-      function updateTimer() {
-        const targetDate = new Date("May 1, 2025 00:00:00").getTime();
-        const now = new Date().getTime();
-        const timeLeft = targetDate - now;
+    <div id="registration-modal" class="modal">
+      <div class="modal-content">
+        <button id="close-modal" class="close-button" aria-label="Закрити">
+          ×
+        </button>
+        <div class="modal-form-container">
+          <h2 class="form-heading">Реєструйся просто зараз</h2>
 
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+          <div class="timer">
+            <div class="timer-item">
+              <div id="modal-days" class="timer-number">00</div>
+              <div class="timer-label">днів</div>
+            </div>
+            <div class="timer-separator">
+              <svg width="6" height="23">
+                <circle cx="3" cy="5" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                <circle cx="3" cy="20" r="3" fill="rgba(1, 1, 1, 0.2)" />
+              </svg>
+            </div>
+            <div class="timer-item">
+              <div id="modal-hours" class="timer-number">00</div>
+              <div class="timer-label">годин</div>
+            </div>
+            <div class="timer-separator">
+              <svg width="6" height="23">
+                <circle cx="3" cy="5" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                <circle cx="3" cy="20" r="3" fill="rgba(1, 1, 1, 0.2)" />
+              </svg>
+            </div>
+            <div class="timer-item">
+              <div id="modal-minutes" class="timer-number">00</div>
+              <div class="timer-label">хвилин</div>
+            </div>
+            <div class="timer-separator">
+              <svg width="6" height="23">
+                <circle cx="3" cy="5" r="3" fill="rgba(1, 1, 1, 0.2)" />
+                <circle cx="3" cy="20" r="3" fill="rgba(1, 1, 1, 0.2)" />
+              </svg>
+            </div>
+            <div class="timer-item">
+              <div id="modal-seconds" class="timer-number timer-number-green">
+                00
+              </div>
+              <div class="timer-label">секунд</div>
+            </div>
+          </div>
 
-        document.getElementById("days").textContent = days
-          .toString()
-          .padStart(2, "0");
-        document.getElementById("hours").textContent = hours
-          .toString()
-          .padStart(2, "0");
-        document.getElementById("minutes").textContent = minutes
-          .toString()
-          .padStart(2, "0");
-        document.getElementById("seconds").textContent = seconds
-          .toString()
-          .padStart(2, "0");
-      }
+          <form id="modal-registration-form" class="registration-form">
+            <div class="input-wrapper">
+              <input
+                id="modal-name"
+                type="text"
+                placeholder="Введи своє ім'я"
+                class="form-input"
+                required
+              />
+              <div class="error-message" id="modal-name-error"></div>
+            </div>
 
-      setInterval(updateTimer, 1000);
-      updateTimer();
+            <div class="input-wrapper">
+              <input
+                id="modal-email"
+                type="email"
+                placeholder="Введи свій E-mail"
+                class="form-input"
+                required
+              />
+              <div class="error-message" id="modal-email-error"></div>
+            </div>
 
-      const form = document.getElementById("registration-form");
-      const nameInput = document.getElementById("name");
-      const emailInput = document.getElementById("email");
-      const phoneInput = document.getElementById("phone");
-      const termsCheckbox = document.getElementById("terms");
-      const checkbox = document.getElementById("checkbox");
+            <div class="input-wrapper">
+              <div class="phone-input-container">
+                <div class="phone-prefix">
+                  <svg
+                    class="ukraine-flag"
+                    width="32"
+                    height="20"
+                    viewBox="0 0 32 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="32" height="10" fill="#005BBB" />
+                    <rect y="10" width="32" height="10" fill="#FFD500" />
+                  </svg>
+                </div>
+                <input
+                  id="modal-phone"
+                  type="tel"
+                  class="form-input phone-input"
+                  placeholder=""
+                  aria-label="Введіть номер телефону"
+                  autocomplete="tel"
+                  pattern="\+380 \d{2} \d{3} \d{2} \d{2}"
+                  required
+                />
+              </div>
+              <div class="error-message" id="modal-phone-error"></div>
+            </div>
 
-      const nameError = document.getElementById("name-error");
-      const emailError = document.getElementById("email-error");
-      const phoneError = document.getElementById("phone-error");
-      const termsError = document.getElementById("terms-error");
+            <div class="terms-container">
+              <label for="modal-terms" class="checkbox-label">
+                <input
+                  type="checkbox"
+                  id="modal-terms"
+                  class="checkbox-input"
+                  required
+                />
+                <div id="modal-checkbox" class="checkbox">
+                  <svg
+                    class="check-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="terms-text">
+                  Згоден з
+                  <a href="#" class="terms-link">Політика конфіденційності</a>
+                  та
+                  <a href="#" class="terms-link"
+                    >Умови користування послугами</a
+                  >
+                </div>
+              </label>
+              <div class="error-message" id="modal-terms-error"></div>
+            </div>
 
-      const validateName = () => {
-        if (!nameInput.value.trim()) {
-          nameInput.classList.add("error");
-          nameError.textContent = "Будь ласка, введіть ваше ім'я";
-          return false;
-        } else {
-          nameInput.classList.remove("error");
-          nameError.textContent = "";
-          return true;
-        }
-      };
+            <button type="submit" class="submit-button">Зареєструватися</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
-      const validateEmail = () => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailInput.value.trim()) {
-          emailInput.classList.add("error");
-          emailError.textContent = "Будь ласка, введіть вашу електронну пошту";
-          return false;
-        } else if (!emailRegex.test(emailInput.value)) {
-          emailInput.classList.add("error");
-          emailError.textContent =
-            "Будь ласка, введіть коректну електронну пошту";
-          return false;
-        } else {
-          emailInput.classList.remove("error");
-          emailError.textContent = "";
-          return true;
-        }
-      };
-
-      const phoneTemplate = "+380 -- -- -- --";
-      let phoneDigitsOnly = "";
-
-      phoneInput.value = phoneTemplate;
-
-      phoneInput.addEventListener("input", function (e) {
-        const cursorPosition = this.selectionStart;
-
-        const inputValue = this.value.replace(/\D/g, "");
-        const inputDigits = inputValue.substring(3);
-        phoneDigitsOnly = inputDigits;
-
-        let formatted = "+380";
-
-        if (inputDigits.length > 0) {
-          formatted +=
-            " " +
-            (inputDigits.length >= 3
-              ? inputDigits.substring(0, 3)
-              : inputDigits.padEnd(3, "-").replace(/-/g, ""));
-        } else {
-          formatted += " --";
-        }
-
-        if (inputDigits.length > 3) {
-          formatted +=
-            " " +
-            (inputDigits.length >= 6
-              ? inputDigits.substring(3, 6)
-              : inputDigits.substring(3).padEnd(3, "-").replace(/-/g, ""));
-        } else {
-          formatted += " --";
-        }
-
-        if (inputDigits.length > 6) {
-          formatted += " " + inputDigits.substring(6, 9);
-        } else {
-          formatted += " --";
-        }
-
-        this.value = formatted;
-
-        const newPosition = Math.min(cursorPosition, this.value.length);
-        this.setSelectionRange(newPosition, newPosition);
-      });
-
-      phoneInput.addEventListener("keydown", function (e) {
-        if (
-          [46, 8, 9, 27, 13].indexOf(e.keyCode) !== -1 ||
-          (e.keyCode === 65 && e.ctrlKey === true) ||
-          (e.keyCode >= 35 && e.keyCode <= 39)
-        ) {
-          return;
-        }
-
-        if (
-          (e.shiftKey || e.keyCode < 48 || e.keyCode > 57) &&
-          (e.keyCode < 96 || e.keyCode > 105)
-        ) {
-          e.preventDefault();
-        }
-
-        if (
-          phoneDigitsOnly.length >= 9 &&
-          !(
-            e.keyCode === 8 ||
-            e.keyCode === 46 ||
-            (e.keyCode >= 35 && e.keyCode <= 39)
-          )
-        ) {
-          e.preventDefault();
-        }
-      });
-
-      phoneInput.addEventListener("focus", function () {
-        if (this.value === "") {
-          this.value = phoneTemplate;
-
-          setTimeout(() => {
-            this.setSelectionRange(5, 5);
-          }, 0);
-        }
-      });
-
-      phoneInput.addEventListener("blur", function () {
-        if (this.value === phoneTemplate) {
-          this.value = "";
-        }
-      });
-
-      const validatePhone = () => {
-        const phoneValue = phoneInput.value;
-
-        if (!phoneValue || phoneValue === phoneTemplate) {
-          phoneInput.classList.add("error");
-          phoneError.textContent = "Будь ласка, введіть ваш номер телефону";
-          return false;
-        } else if (phoneValue.includes("--")) {
-          phoneInput.classList.add("error");
-          phoneError.textContent = "Будь ласка, введіть повний номер телефону";
-          return false;
-        } else {
-          phoneInput.classList.remove("error");
-          phoneError.textContent = "";
-          return true;
-        }
-      };
-
-      const validateTerms = () => {
-        if (!termsCheckbox.checked) {
-          checkbox.classList.add("error");
-          termsError.textContent = "Будь ласка, погодьтеся з умовами";
-          return false;
-        } else {
-          checkbox.classList.remove("error");
-          termsError.textContent = "";
-          return true;
-        }
-      };
-
-      termsCheckbox.addEventListener("change", () => {
-        if (termsCheckbox.checked) {
-          checkbox.classList.add("checked");
-        } else {
-          checkbox.classList.remove("checked");
-        }
-        validateTerms();
-      });
-
-      nameInput.addEventListener("input", validateName);
-      emailInput.addEventListener("input", validateEmail);
-      phoneInput.addEventListener("input", validatePhone);
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const isNameValid = validateName();
-        const isEmailValid = validateEmail();
-        const isPhoneValid = validatePhone();
-        const areTermsAccepted = validateTerms();
-
-        if (isNameValid && isEmailValid && isPhoneValid && areTermsAccepted) {
-          const phoneDigits = phoneInput.value.replace(/\D/g, "");
-
-          const formData = {
-            name: nameInput.value.trim(),
-            email: emailInput.value.trim(),
-            phone: `+${phoneDigits}`,
-            termsAccepted: termsCheckbox.checked,
-          };
-
-          fetch("https://example.com/register", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          })
-            .then((response) => {
-              if (response.ok) {
-                alert("Дякуємо за реєстрацію!");
-                form.reset();
-                phoneInput.value = "";
-                checkbox.classList.remove("checked");
-              } else {
-                alert(
-                  "Виникла помилка при відправці форми. Будь ласка, спробуйте пізніше."
-                );
-              }
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-              alert(
-                "Виникла помилка при відправці форми. Будь ласка, спробуйте пізніше."
-              );
-            });
-        }
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
